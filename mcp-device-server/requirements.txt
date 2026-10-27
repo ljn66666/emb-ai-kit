@@ -1,0 +1,3 @@
+# Only required to talk to real hardware.
+# The MCP transport itself uses the Python standard library (zero deps).
+pyserial>=3.5
