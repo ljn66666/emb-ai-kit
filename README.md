@@ -73,21 +73,25 @@ Never send raw `angle=90` strings. Use a length-prefixed or delimiter-framed pro
 ```
 emb-ai-kit/
 ├── README.md
-└── examples/
-    └── serial_voice_agent/        # voice/text → LLM → servo actions
-        ├── README.md
-        ├── firmware/              # ESP32S3 firmware (PlatformIO)
-        │   ├── platformio.ini
-        │   └── src/main.cpp
-        └── host/
-            ├── bridge.py          # serial ↔ LLM, optional MCP exposure
-            └── requirements.txt
+├── examples/
+│   └── serial_voice_agent/        # voice/text → LLM → servo actions
+│       ├── README.md
+│       ├── firmware/              # ESP32S3 firmware (PlatformIO)
+│       │   ├── platformio.ini
+│       │   └── src/main.cpp
+│       └── host/
+│           ├── bridge.py          # serial ↔ LLM, optional MCP exposure
+│           └── requirements.txt
+└── mcp-device-server/             # turn the device into an MCP server
+    ├── server.py                  # stdlib MCP stdio transport (no 3rd-party deps)
+    ├── requirements.txt
+    └── README.md
 ```
 
 ## Roadmap
 
+- [x] `mcp-device-server` — **shipped.** Zero-dependency MCP stdio server that turns any emb-ai-kit device into MCP tools (`move_servo` / `read_sensor` / `center_all`). See [`mcp-device-server/`](mcp-device-server/).
 - [ ] `servo-stabilizer` library — deterministic boot init, anti-jitter, current-aware throttling
-- [ ] `mcp-device-server` — expose any emb-ai-kit device as a standards-compliant MCP server
 - [ ] STM32 HAL port
 - [ ] Fritzing / KiCad reference schematic for the power-split board
 
