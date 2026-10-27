@@ -86,12 +86,17 @@ emb-ai-kit/
     ├── server.py                  # stdlib MCP stdio transport (no 3rd-party deps)
     ├── requirements.txt
     └── README.md
+└── servo-stabilizer/              # kill boot jitter + power brownout
+    ├── src/                       # Arduino/C++ lib (ServoStabilizer)
+    ├── python/scheduler.py        # same throttle math, pure Python
+    ├── tests/test_scheduler.py    # unit tests (stdlib, no hardware)
+    └── README.md
 ```
 
 ## Roadmap
 
 - [x] `mcp-device-server` — **shipped.** Zero-dependency MCP stdio server that turns any emb-ai-kit device into MCP tools (`move_servo` / `read_sensor` / `center_all`). See [`mcp-device-server/`](mcp-device-server/).
-- [ ] `servo-stabilizer` library — deterministic boot init, anti-jitter, current-aware throttling
+- [x] `servo-stabilizer` — **shipped.** Kills the two silent servo killers: boot-state jitter (idle written before attach) and power brownout (current-aware scheduler never exceeds the supply budget). See [`servo-stabilizer/`](servo-stabilizer/). Throttle math is unit-tested in `servo-stabilizer/tests/`.
 - [ ] STM32 HAL port
 - [ ] Fritzing / KiCad reference schematic for the power-split board
 
