@@ -108,9 +108,20 @@ MIT. PRs welcome — especially pitfall write-ups that include an oscilloscope t
 
 If emb-ai-kit saves you debug days, sponsor via **GitHub Sponsors**. Sponsors get priority issue response and early access to the `servo-stabilizer` and `mcp-device-server` modules.
 
-## Commercial track
+## Hire me — custom hardware↔LLM work
 
-The core library is **MIT — free even for commercial use**. The paid track is custom work: a bespoke MCP device server, white-label firmware, or on-site integration. That is where the real leverage lives — *one build, many buyers* — instead of billing hours.
+The open-source kit above is the demo. The paid work reuses it as a foundation:
+
+- **MCP device server** — expose your robot/sensor as MCP tools any LLM client can call.
+- **White-label firmware** — production ESP32/STM32 firmware with the power/ground/boot pitfalls already solved.
+- **Power & boot review** — send a schematic; I flag brownout and strapping-pin traps *before* you spin a board.
+- **Voice/agent bridge** — turn a gadget into a tool an LLM drives (the `serial_voice_agent` example, customized).
+
+**Who it's for:** founders prototyping hardware+AI, hobbyists stuck on *"it resets when it moves,"* and teams that need an LLM to control real actuators.
+
+**Start a conversation:** open a [GitHub Issue](https://github.com/ljn66666/emb-ai-kit/issues/new?template=consulting.md) (template included) or email **3049324784@qq.com**. I reply to every serious inquiry.
+
+The core library stays **MIT — free even for commercial use**. Custom builds are the leverage play: *one build, many buyers* — not billing hours.
 
 ## License
 
