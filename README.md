@@ -1,5 +1,8 @@
 # emb-ai-kit
 
+> [中文文档 / Chinese docs](README.zh-CN.md) ｜ [中文实战手册](docs/zh-CN/中文实战手册.md) ｜ [接线图](docs/zh-CN/wiring.svg)
+
+
 > Minimal, battle-tested scaffolding to connect microcontrollers (ESP32 / STM32) to LLMs and MCP servers.
 
 **Built from real hardware.** Every pitfall documented here was hit on actual silicon — a desktop robot with 4× SG90 servos and I2S audio on a Seeed XIAO ESP32S3 Sense — not copied from a tutorial. If you want your gadget to talk to an LLM without spending three days on brownout resets, start here.
